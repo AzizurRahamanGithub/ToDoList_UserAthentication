@@ -1,0 +1,15 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'style/main.css' %}">
+
+<div class="task-view">
+    <h2 class="form-title">Task Details</h2>
+    <a href="{% url 'tasks' %}" class="back-link">Go Back</a>
+    <div class="task-details">
+        <p><strong>Title:</strong> <p>{{ task.title }}</p></p><br>
+        <p><strong>Description:</strong> <p>{{ task.description }}</p></p>
+        <br><br>
+        <p><strong>Created on:</strong> {{ task.created }}</p>
+        <p><strong>Status:</strong> {{ task.complete|yesno:"Completed,Incomplete" }}</p>
+    </div>
+</div>

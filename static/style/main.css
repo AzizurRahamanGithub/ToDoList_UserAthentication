@@ -1,0 +1,441 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Container */
+/* Scrollable Task List Container */
+/* Fixed Table Headers and Scrollable Body */
+.table-tasks{
+    padding: 100px;
+}
+
+.add-task{
+    height: 600px;
+}
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    min-height: 600px;
+}
+
+/* Header */
+h1 {
+    color: #2a9d8f;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+/* Auth Section */
+.auth-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.auth-section p {
+    font-weight: bold;
+}
+
+.auth-section a,
+.auth-section button {
+    padding: 8px 12px;
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.auth-section button:hover,
+.auth-section a:hover {
+    background-color: #d65a3f;
+}
+
+/* Add Task Button Style */
+.btn{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+.btn .add-task-button {
+    float: right;
+    margin-bottom: 1rem;
+    display: block;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2a9d8f;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn .add-task-button:hover {
+    background-color: #21867a;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn .add-task-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Style */
+.btn .add-task-button svg {
+    margin-right: 8px;
+    fill: white;
+    width: 1em;
+    height: 1em;
+}
+
+
+/* Search Section */
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #248773;
+}
+
+/* Task Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #2a9d8f;
+    color: white;
+}
+
+table td {
+    font-size: 1em;
+}
+
+table td a {
+    padding: 5px 10px;
+    background-color: #e9c46a;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+table td a:hover {
+    background-color: #f4a261;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Strike-through Style */
+strike {
+    color: #888;
+}
+
+
+/* task_form start */
+/* Page Title */
+.form-title {
+    color: #2a9d8f;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Back Link */
+.back-link {
+    display: inline-block;
+    color: #2a9d8f;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #21867a;
+}
+
+/* Task Form */
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.task-form input[type="text"],
+.task-form textarea,
+.task-form select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #2a9d8f;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #21867a;
+}
+
+
+/* detail style start *//* Task View Start */
+.task-view {
+width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title, matching the form title style */
+.form-title {
+    color: #2a9d8f;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Back Link, similar to the form page */
+.back-link {
+    display: inline-block;
+    color: #2a9d8f;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #21867a;
+}
+
+/* Task Details */
+.task-details p {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.task-details p strong {
+    color: #2a9d8f;
+}
+/* Task View End */
+
+
+/* Delete Confirmation Start */
+.delete-confirmation {
+    width: 800px;
+    margin: 0 auto;
+    height: 400px;
+    padding: 20px;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Title (reused style) */
+.form-title {
+    color: #2a9d8f;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Confirmation Text */
+.confirmation-text {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Confirmation Form and Button */
+.confirmation-form {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    align-items: center;
+    width: 100%;
+    gap: 207;
+}
+
+.confirm-button {
+    padding: 10px 20px;
+    background-color: #e63946;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+}
+
+.confirm-button:hover {
+    background-color: #d62828;
+}
+
+/* Back Link (reused style) */
+.back-link {
+    color: #2a9d8f;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #21867a;
+}
+/* Delete Confirmation End */
+
+/* Login Page Start */
+.login-container {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 500px;
+}
+
+/* Title */
+.form-title {
+    color: #2a9d8f;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Login Form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-top: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #555;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Submit Button */
+.submit-button {
+    padding: 10px 20px;
+    background-color: #2a9d8f;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #21867a;
+}
+
+/* Register Link */
+.register-link {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.register-link a {
+    color: #2a9d8f;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.register-link a:hover {
+    color: #21867a;
+}
+/* Login Page End */
+

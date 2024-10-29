@@ -1,0 +1,20 @@
+# Python files
+*.pyc
+__pycache__/
+
+# Environment variables and virtual environments
+.env
+venv/
+.env/  # Your virtual environment name
+
+# Django-related
+db.sqlite3  # Your database file, if using SQLite
+media/      # User-uploaded content if any
+
+# System files
+.DS_Store
+*.log
+
+# IDEs and editors
+.vscode/
+.idea/

@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="{% static 'style/main.css' %}">
+</head>
+<body>
+<div class="container">
+    {% if request.user.is_authenticated %}
+        <div class="auth-section">
+            <p>{{ request.user }}</p>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+    {% else %}
+        <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+
+    <h1>TODOLIST</h1>
+    <div class=" btn">
+        <a href="{% url 'task-create' %}" class="add-task-button">Add Task</a>
+    </div>
+
+    
+
+    <form action="" method="get">
+        <input type="text" name="search-area" value="{{ search_input }}" placeholder="Search tasks...">
+        <input type="submit" value="Search">
+    </form>
+
+    <p>You have {{ count }} incomplete tasks</p>
+
+    <table >
+        <tr>
+            <th>Item</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{% if task.complete %}<strike>{{ task.title }}</strike>{% else %}{{ task.title }}{% endif %}</td>
+            <td>
+                <a href="{% url 'task' task.id %}">View</a>
+                <a href="{% url 'task-update' task.id %}">Update</a>
+                <a href="{% url 'task-delete' task.id %}">Delete</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="2"><h3>There is no information</h3></td></tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'style/main.css' %}">
+
+
+<div class="login-container">
+    <h1 class="form-title">Registration</h1>
+
+<form action="" method="post" class="login-form">  <!-- Added class for styling -->
+    {% csrf_token %}
+    <div class="form-group">  <!-- Wrapper for form group -->
+        <label for="{{ form.username.id_for_label }}">Username</label>  <!-- Add a label for username -->
+        {{ form.username }}  <!-- Render the username input field -->
+    </div>
+    <div class="form-group">  <!-- Wrapper for form group -->
+        <label for="{{ form.password1.id_for_label }}">Password</label>  <!-- Add a label for password -->
+        {{ form.password1 }}  <!-- Render the password input field -->
+    </div>
+    <div class="form-group">  <!-- Wrapper for form group -->
+        <label for="{{ form.password2.id_for_label }}">Confirm Password</label>  <!-- Add a label for confirming password -->
+        {{ form.password2 }}  <!-- Render the confirm password input field -->
+    </div>
+
+    <input type="submit" value="Register" class="submit-button">  <!-- Added class for styling -->
+</form>
+
+<p class="register-link">Have an account? <a href="{% url 'login' %}">Login</a></p>  <!-- Added class for styling -->
+
+</div>

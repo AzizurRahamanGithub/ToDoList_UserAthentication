@@ -1,0 +1,15 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'style/main.css' %}">
+
+<div class="delete-confirmation">
+    <h2 class="form-title">Delete Task</h2>
+    <p class="confirmation-text">Are you sure you want to delete  "{{ task_dlt }}"?</p>
+    <br>
+    
+    <form action="" method="post" class="confirmation-form">
+        {% csrf_token %}
+        <input type="submit" value="Confirm" class="confirm-button">
+        <a href="{% url 'tasks' %}" class="back-link">Go Back</a>
+    </form>
+</div>
