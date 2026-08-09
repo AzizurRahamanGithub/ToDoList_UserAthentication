@@ -1,0 +1,15 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'style/main.css' %}">
+
+<div class="container add-task">
+  <h3 class="form-title">Task Form</h3>
+  
+  <a href="{% url 'tasks' %}" class="back-link">Go Back</a>
+  
+  <form action="" method="post" class="task-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Submit" class="submit-button">
+  </form>
+</div>
